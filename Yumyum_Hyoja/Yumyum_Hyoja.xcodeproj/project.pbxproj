@@ -15,6 +15,8 @@
 		119E60D42C1F4FC90073E80D /* RandomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E60D32C1F4FC90073E80D /* RandomView.swift */; };
 		119E60D62C1F4FE00073E80D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E60D52C1F4FE00073E80D /* MapView.swift */; };
 		119E60D82C1F4FEE0073E80D /* UghView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E60D72C1F4FEE0073E80D /* UghView.swift */; };
+		119E60DB2C1FC0750073E80D /* RandomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E60DA2C1FC0750073E80D /* RandomButtonView.swift */; };
+		119E60DD2C1FC10C0073E80D /* RandomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E60DC2C1FC10C0073E80D /* RandomCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		119E60D32C1F4FC90073E80D /* RandomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomView.swift; sourceTree = "<group>"; };
 		119E60D52C1F4FE00073E80D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		119E60D72C1F4FEE0073E80D /* UghView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UghView.swift; sourceTree = "<group>"; };
+		119E60DA2C1FC0750073E80D /* RandomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomButtonView.swift; sourceTree = "<group>"; };
+		119E60DC2C1FC10C0073E80D /* RandomCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				119E60C42C1F4C5A0073E80D /* MainView.swift */,
 				119E60D12C1F4FB50073E80D /* HongsiView.swift */,
 				119E60D32C1F4FC90073E80D /* RandomView.swift */,
+				119E60DC2C1FC10C0073E80D /* RandomCardView.swift */,
+				119E60DA2C1FC0750073E80D /* RandomButtonView.swift */,
 				119E60D52C1F4FE00073E80D /* MapView.swift */,
 				119E60D72C1F4FEE0073E80D /* UghView.swift */,
 				119E60C62C1F4C5B0073E80D /* Assets.xcassets */,
@@ -153,8 +159,10 @@
 			files = (
 				119E60D22C1F4FB50073E80D /* HongsiView.swift in Sources */,
 				119E60C52C1F4C5A0073E80D /* MainView.swift in Sources */,
+				119E60DB2C1FC0750073E80D /* RandomButtonView.swift in Sources */,
 				119E60D62C1F4FE00073E80D /* MapView.swift in Sources */,
 				119E60C32C1F4C5A0073E80D /* Yumyum_HyojaApp.swift in Sources */,
+				119E60DD2C1FC10C0073E80D /* RandomCardView.swift in Sources */,
 				119E60D42C1F4FC90073E80D /* RandomView.swift in Sources */,
 				119E60D82C1F4FEE0073E80D /* UghView.swift in Sources */,
 			);
