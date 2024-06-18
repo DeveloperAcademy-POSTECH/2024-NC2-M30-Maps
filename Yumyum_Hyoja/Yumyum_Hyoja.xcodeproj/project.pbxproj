@@ -18,9 +18,9 @@
 		119E60DB2C1FC0750073E80D /* RandomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E60DA2C1FC0750073E80D /* RandomButtonView.swift */; };
 		119E60DD2C1FC10C0073E80D /* RandomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E60DC2C1FC10C0073E80D /* RandomCardView.swift */; };
 		119E60DF2C1FC69D0073E80D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E60DE2C1FC69D0073E80D /* MainView.swift */; };
-		119E60E22C1FCC770073E80D /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 119E60E12C1FCC770073E80D /* Lottie */; };
 		119E60E42C1FCCB20073E80D /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E60E32C1FCCB20073E80D /* LottieView.swift */; };
 		119E60EC2C1FE48C0073E80D /* Animation - test.json in Resources */ = {isa = PBXBuildFile; fileRef = 119E60EB2C1FE48B0073E80D /* Animation - test.json */; };
+		1C56ABE52C21180A00A80244 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1C56ABE42C21180A00A80244 /* Lottie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				119E60E22C1FCC770073E80D /* Lottie in Frameworks */,
+				1C56ABE52C21180A00A80244 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,17 +72,8 @@
 		119E60C12C1F4C5A0073E80D /* Yumyum_Hyoja */ = {
 			isa = PBXGroup;
 			children = (
+				1C56ABE62C21215300A80244 /* View */,
 				119E60C22C1F4C5A0073E80D /* Yumyum_HyojaApp.swift */,
-				119E60EF2C20003B0073E80D /* View */,
-				119E60DE2C1FC69D0073E80D /* MainView.swift */,
-				119E60C42C1F4C5A0073E80D /* SplashView.swift */,
-				119E60D12C1F4FB50073E80D /* HongsiView.swift */,
-				119E60E32C1FCCB20073E80D /* LottieView.swift */,
-				119E60D32C1F4FC90073E80D /* RandomView.swift */,
-				119E60DC2C1FC10C0073E80D /* RandomCardView.swift */,
-				119E60DA2C1FC0750073E80D /* RandomButtonView.swift */,
-				119E60D52C1F4FE00073E80D /* MapView.swift */,
-				119E60D72C1F4FEE0073E80D /* UghView.swift */,
 				119E60F02C20007A0073E80D /* Resource */,
 				119E60C82C1F4C5B0073E80D /* Yumyum_Hyoja.entitlements */,
 				119E60C92C1F4C5B0073E80D /* Preview Content */,
@@ -98,13 +89,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		119E60EF2C20003B0073E80D /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		119E60F02C20007A0073E80D /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +96,22 @@
 				119E60C62C1F4C5B0073E80D /* Assets.xcassets */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		1C56ABE62C21215300A80244 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				119E60DE2C1FC69D0073E80D /* MainView.swift */,
+				119E60C42C1F4C5A0073E80D /* SplashView.swift */,
+				119E60D12C1F4FB50073E80D /* HongsiView.swift */,
+				119E60E32C1FCCB20073E80D /* LottieView.swift */,
+				119E60D32C1F4FC90073E80D /* RandomView.swift */,
+				119E60DC2C1FC10C0073E80D /* RandomCardView.swift */,
+				119E60DA2C1FC0750073E80D /* RandomButtonView.swift */,
+				119E60D52C1F4FE00073E80D /* MapView.swift */,
+				119E60D72C1F4FEE0073E80D /* UghView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,7 +131,7 @@
 			);
 			name = Yumyum_Hyoja;
 			packageProductDependencies = (
-				119E60E12C1FCC770073E80D /* Lottie */,
+				1C56ABE42C21180A00A80244 /* Lottie */,
 			);
 			productName = Yumyum_Hyoja;
 			productReference = 119E60BF2C1F4C5A0073E80D /* Yumyum_Hyoja.app */;
@@ -162,7 +162,7 @@
 			);
 			mainGroup = 119E60B62C1F4C5A0073E80D;
 			packageReferences = (
-				119E60E02C1FCC770073E80D /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				1C56ABE32C21180A00A80244 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 119E60C02C1F4C5A0073E80D /* Products */;
 			projectDirPath = "";
@@ -330,7 +330,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Yumyum_Hyoja/Preview Content\"";
-				DEVELOPMENT_TEAM = 3ZR9N55K6L;
+				DEVELOPMENT_TEAM = ZZDK292D7X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -344,7 +344,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
@@ -352,7 +352,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.Yumyum-Hyoja";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -368,7 +369,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Yumyum_Hyoja/Preview Content\"";
-				DEVELOPMENT_TEAM = 3ZR9N55K6L;
+				DEVELOPMENT_TEAM = ZZDK292D7X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -382,7 +383,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
@@ -390,7 +391,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.Yumyum-Hyoja";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -421,7 +423,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		119E60E02C1FCC770073E80D /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+		1C56ABE32C21180A00A80244 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
 			requirement = {
@@ -432,9 +434,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		119E60E12C1FCC770073E80D /* Lottie */ = {
+		1C56ABE42C21180A00A80244 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 119E60E02C1FCC770073E80D /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			package = 1C56ABE32C21180A00A80244 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
