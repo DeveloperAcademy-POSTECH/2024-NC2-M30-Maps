@@ -19,7 +19,7 @@
 		119E60DD2C1FC10C0073E80D /* RandomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E60DC2C1FC10C0073E80D /* RandomCardView.swift */; };
 		119E60DF2C1FC69D0073E80D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E60DE2C1FC69D0073E80D /* MainView.swift */; };
 		119E60E22C1FCC770073E80D /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 119E60E12C1FCC770073E80D /* Lottie */; };
-		119E60E42C1FCCB20073E80D /* Lottie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E60E32C1FCCB20073E80D /* Lottie.swift */; };
+		119E60E42C1FCCB20073E80D /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E60E32C1FCCB20073E80D /* LottieView.swift */; };
 		119E60EC2C1FE48C0073E80D /* Animation - test.json in Resources */ = {isa = PBXBuildFile; fileRef = 119E60EB2C1FE48B0073E80D /* Animation - test.json */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +37,7 @@
 		119E60DA2C1FC0750073E80D /* RandomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomButtonView.swift; sourceTree = "<group>"; };
 		119E60DC2C1FC10C0073E80D /* RandomCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCardView.swift; sourceTree = "<group>"; };
 		119E60DE2C1FC69D0073E80D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		119E60E32C1FCCB20073E80D /* Lottie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lottie.swift; sourceTree = "<group>"; };
+		119E60E32C1FCCB20073E80D /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; usesTabs = 0; };
 		119E60EB2C1FE48B0073E80D /* Animation - test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Animation - test.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,7 +77,7 @@
 				119E60DE2C1FC69D0073E80D /* MainView.swift */,
 				119E60C42C1F4C5A0073E80D /* SplashView.swift */,
 				119E60D12C1F4FB50073E80D /* HongsiView.swift */,
-				119E60E32C1FCCB20073E80D /* Lottie.swift */,
+				119E60E32C1FCCB20073E80D /* LottieView.swift */,
 				119E60D32C1F4FC90073E80D /* RandomView.swift */,
 				119E60DC2C1FC10C0073E80D /* RandomCardView.swift */,
 				119E60DA2C1FC0750073E80D /* RandomButtonView.swift */,
@@ -198,7 +198,7 @@
 				119E60D62C1F4FE00073E80D /* MapView.swift in Sources */,
 				119E60C32C1F4C5A0073E80D /* Yumyum_HyojaApp.swift in Sources */,
 				119E60DD2C1FC10C0073E80D /* RandomCardView.swift in Sources */,
-				119E60E42C1FCCB20073E80D /* Lottie.swift in Sources */,
+				119E60E42C1FCCB20073E80D /* LottieView.swift in Sources */,
 				119E60D42C1F4FC90073E80D /* RandomView.swift in Sources */,
 				119E60D82C1F4FEE0073E80D /* UghView.swift in Sources */,
 			);
