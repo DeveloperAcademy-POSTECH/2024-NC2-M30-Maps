@@ -51,7 +51,8 @@ struct MapView: View {
                 .padding()
             }
         }
-        .navigationBarTitleDisplayMode(.inline) // 이 부분을 추가하여 Navigation Bar 타이틀을 inline으로 설정
+        .navigationBarTitle("", displayMode: .inline) // 네비게이션 바 제목 숨기기
+         .navigationBarBackButtonHidden(true) // "< Back" 버튼 숨기기
         .background(
             NavigationLink(destination: UghView(), isActive: $navigationActive) {
                 EmptyView()

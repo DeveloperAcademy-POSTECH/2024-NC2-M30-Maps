@@ -16,22 +16,22 @@ struct RandomCardView: View {
     var body: some View {
         VStack {
             if selectedCard == "SuniCardView" {
-                Image("sunicard_view")
+                Image("SuniCard")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .padding()
             } else if selectedCard == "HongunSpotCard" {
-                Image("hongun_spot_card")
+                Image("HongunSpotCard")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .padding()
             } else if selectedCard == "DeoksuPastaCard" {
-                Image("Deoksu_PastaCard")
+                Image("DeoksuPastaCard")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .padding()
             } else if selectedCard == "SeaweedKimbapCard" {
-                Image("Seaweed_KimbapCard")
+                Image("SeaweedKimbapCard")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .padding()
