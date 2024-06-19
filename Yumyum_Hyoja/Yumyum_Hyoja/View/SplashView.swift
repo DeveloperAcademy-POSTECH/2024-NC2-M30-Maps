@@ -9,26 +9,13 @@ import SwiftUI
 
 struct SplashView: View {
     var body: some View {
-//        ZStack {
-//            Color.blue
-//                .edgesIgnoringSafeArea(.all)
-//            
-//            VStack {
-//                Image(systemName: "star.fill")
-//                    .font(.system(size: 100))
-//                    .foregroundColor(.white)
-//                Text("스플래시 화면")
-//                    .font(.title)
-//                    .foregroundColor(.white)
-//            }
-//        }
         Image("Nsplash")
-            .resizable()
-            .scaledToFill()
+            .resizable() // 이미지가 부모 뷰의 레이아웃에 맞게 크기 조정
+            .scaledToFill() // 이미지를 뷰의 크기에 맞게 확대 또는 축소
     }
     
 }
 
-#Preview {
-    SplashView()
-}
+//#Preview {
+//    SplashView()
+//}

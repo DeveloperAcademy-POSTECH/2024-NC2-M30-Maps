@@ -43,8 +43,8 @@ struct LottieView: UIViewRepresentable {
     func updateUIView(_ uiView: UIViewType, context: UIViewRepresentableContext<LottieView>) {}
 }
 
-struct LottieView_Previews: PreviewProvider {
-    static var previews: some View {
-        LottieView(filename: "Animation-test", completion: {})
-    }
-}
+//struct LottieView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LottieView(filename: "Animation-test", completion: {})
+//    }
+//}
