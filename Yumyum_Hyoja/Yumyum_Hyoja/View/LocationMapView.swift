@@ -14,11 +14,12 @@ import MapKit
 import CoreLocation
 
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
-    //현재 위치 정보 관리, 위치 업데이트 및 오류 처리
+    //'LocationManager'로 현재 위치 정보 관리, 'CLLocationManagerDelegate'로 위치 업데이트 및 오류 처리
     private let manager = CLLocationManager()
     @Published var location: CLLocationCoordinate2D?
-    
+    // @Published를 사용하여 location 변수 선언. 이 값이 변경될 때마다 뷰가 자동으로 업데이트됨
     override init() {
+        // 초기화 메서드 init()에서 CLLocationManager의 권한 요청, 위치 업데이트를 시작
         super.init()
         manager.delegate = self
         manager.requestWhenInUseAuthorization()
@@ -26,24 +27,29 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        // locationManager(_:didUpdateLocations:) 메서드는 위치가 업데이트될 때 호출, 첫 번째 위치를 location 변수에 저장
         if let location = locations.first {
             self.location = location.coordinate
         }
     }
     
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) 
+    // locationManager(_:didFailWithError:) 메서드는 위치 업데이트 실패 시 호출
+    {
         print("Location manager failed with error: \(error.localizedDescription)")
     }
     
     func requestLocation() {
         manager.requestLocation()
+        // requestLocation() 메서드는 위치를 요청
     }
 }
 
 struct MapAnnotation: Identifiable {
-    // 지도에 표시할 위치 정보를 담는 구조체
+    // MapAnnotation 구조체는 지도의 마커. Identifiable 프로토콜을 채택하여 고유한 식별자를 가짐
     let id = UUID()
     var coordinate: CLLocationCoordinate2D
+    // coordinate 변수는 마커의 위치
 }
 
 struct LocationMapView: View {
@@ -74,6 +80,7 @@ struct LocationMapView: View {
                 })
                 //사용자가 출발지를 입력하는 텍스트 필드. 사용자가 입력을 완료하면 searchForLocation(query:) 메서드가 호출
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+                // 텍스트 필드에 둥근 테두리 스타일을 적용
                 .padding()
                 
                 if let currentLocation = locationManager.location {
@@ -85,14 +92,17 @@ struct LocationMapView: View {
                     // 지도 표시. coordinateRegion을 바인딩하여 지도 중심과 확대/축소 범위를 제어. annotationItems를 사용하여 지도에 마커를 표시
                     .onAppear {
                         region.center = currentLocation
+                        // onAppear 클로저에서 region.center를 현재 위치로 설정
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    // 지도의 크기를 최대화
                 } else {
                     ProgressView("위치 정보를 가져오는 중...")
                         .padding()
                         .onAppear {
                             locationManager.requestLocation()
                         }
+                    // 현재 위치가 없으면 ProgressView를 표시. onAppear 클로저에서 위치를 요청
                 }
                 
                 
@@ -105,57 +115,68 @@ struct LocationMapView: View {
                             showLottieView = true
                             print("출발지가 설정되었습니다: \(address)")
                         }
-                        // 사용자가 출발지를 설정할 수 있는 버튼. 버튼을 클릭하면 선택한 위치가 저장, Lottie 애니메이션이 표시
+                        // 검색된 주소가 있으면 해당 주소와 출발지로 설정할 수 있는 버튼 표시
+                        // Button 클릭 시 selectedCoordinate에 현재 지도의 중심 좌표를 저장, showLottieView를 true로 설정
                         .padding()
-                        .background(Color.blue)
+                        .background(Color.main)
                         .foregroundColor(.white)
                         .cornerRadius(8)
+                        // 버튼 스타일을 설정: 배경색, 텍스트 색상, 테두리 모서리를 둥글게.
                     }
                     .padding()
                 }
                 
-                Spacer() // NavigationLink를 화면 하단에 고정하기 위한 공간 확보
+                Spacer() 
+                // NavigationLink를 화면 하단에 고정하기 위한 공간 확보
             }
             
             .background(
                 NavigationLink(destination: RandomView(coordinate: selectedCoordinate), isActive: $showLottieView) {
                     EmptyView()
                 }
-                // Lottie 애니메이션이 표시된 후 RandomView로 전환. selectedCoordinate를 RandomView에 전달합니다.
+                // Lottie 애니메이션이 표시된 후 RandomView로 전환. selectedCoordinate를 RandomView에 전달
             )
         }
-        .navigationViewStyle(StackNavigationViewStyle()) // NavigationView 스타일을 StackNavigationViewStyle로 설정하여 제목을 숨김
+        .navigationViewStyle(StackNavigationViewStyle()) 
+        // NavigationView 스타일을 StackNavigationViewStyle로 설정하여 제목을 숨김
     }
     
     private func searchForLocation(query: String) {
+        // 사용자가 입력한 검색어를 기반으로 위치를 검색
         let request = MKLocalSearch.Request()
+        // 객체를 생성, 검색어를 설정
         request.naturalLanguageQuery = query
         let search = MKLocalSearch(request: request)
-        
+        // 객체를 생성 검색을 시작
         search.start { response, error in
             if let response = response, let item = response.mapItems.first {
                 self.searchedAddress = item.placemark.title
                 self.region.center = item.placemark.coordinate
             } else {
                 print("검색 결과를 찾을 수 없습니다: \(error?.localizedDescription ?? "알 수 없는 오류")")
+                // 검색 결과를 처리하여 첫 번째 항목의 주소와 좌표를 저장. 오류가 발생하면 오류 메시지를 출력
             }
         }
     }
     
     private func locationAnnotations() -> [MapAnnotation] {
+        // locationAnnotations() 메서드는 지도에 표시할 마커 목록 반환
         var annotations = [MapAnnotation]()
         if let location = locationManager.location {
             annotations.append(MapAnnotation(coordinate: location))
         }
+        // 현재 위치가 있으면 이를 마커로 추가
         if let address = searchedAddress {
             let geocoder = CLGeocoder()
             geocoder.geocodeAddressString(address) { (placemarks, error) in
                 if let placemarks = placemarks, let location = placemarks.first?.location {
                     annotations.append(MapAnnotation(coordinate: location.coordinate))
+                    // 검색된 주소가 있으면 이를 지오코딩하여 위치를 얻고 마커로 추가
                 }
             }
         }
         return annotations
+        // 마커 목록을 반환
     }
 }
 
