@@ -13,7 +13,7 @@ struct UghView: View {
     
     var body: some View {
         VStack {
-            LottieView(filename: "UghAnimationFileName") // 적절한 애니메이션 파일 이름으로 대체해주세요.
+            LottieView(filename: "Animation-test") // 적절한 애니메이션 파일 이름으로 대체해주세요.
         }
         .onAppear {
             playSound()

@@ -54,10 +54,17 @@ struct LocationMapView: View {
     @State private var searchedAddress: String? = nil
     @State private var showLottieView = false
     @State private var selectedCoordinate: CLLocationCoordinate2D? = nil
+
     
     var body: some View {
         NavigationView {
             VStack {
+                TextField("출발지를 검색하세요", text: $searchText, onCommit: {
+                    searchForLocation(query: searchText)
+                })
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+                
                 if let currentLocation = locationManager.location {
                     Map(coordinateRegion: $region, annotationItems: locationAnnotations()) { location in
                         MapMarker(coordinate: location.coordinate, tint: .red)
@@ -74,11 +81,7 @@ struct LocationMapView: View {
                         }
                 }
                 
-                TextField("출발지를 검색하세요", text: $searchText, onCommit: {
-                    searchForLocation(query: searchText)
-                })
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
+                
                 
                 if let address = searchedAddress {
                     VStack {
@@ -140,8 +143,8 @@ struct LocationMapView: View {
     }
 }
 
-struct LocationMapView_Previews: PreviewProvider {
-    static var previews: some View {
-        LocationMapView()
-    }
-}
+//struct LocationMapView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LocationMapView()
+//    }
+//}

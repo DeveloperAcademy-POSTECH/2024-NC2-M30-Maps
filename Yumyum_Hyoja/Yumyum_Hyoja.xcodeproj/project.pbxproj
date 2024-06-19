@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11233C322C21B6FC005F91E3 /* Hongun_spotCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11233C312C21B6FC005F91E3 /* Hongun_spotCardView.swift */; };
-		11233C342C21B715005F91E3 /* Deoksu_PastaCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11233C332C21B715005F91E3 /* Deoksu_PastaCardView.swift */; };
-		11233C362C21B72D005F91E3 /* Seaweed_KimbapCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11233C352C21B72D005F91E3 /* Seaweed_KimbapCardView.swift */; };
 		11233C4B2C21EDEC005F91E3 /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11233C4A2C21EDEC005F91E3 /* CLLocationCoordinate2D.swift */; };
-		11233C4D2C21F7AA005F91E3 /* DirectionsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11233C4C2C21F7AA005F91E3 /* DirectionsHelper.swift */; };
+		11233C4F2C22687F005F91E3 /* RandomcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11233C4E2C22687F005F91E3 /* RandomcardView.swift */; };
+		11233C512C22815C005F91E3 /* middle.json in Resources */ = {isa = PBXBuildFile; fileRef = 11233C502C22815C005F91E3 /* middle.json */; };
 		119E60C32C1F4C5A0073E80D /* Yumyum_HyojaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E60C22C1F4C5A0073E80D /* Yumyum_HyojaApp.swift */; };
 		119E60C52C1F4C5A0073E80D /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E60C42C1F4C5A0073E80D /* SplashView.swift */; };
 		119E60C72C1F4C5B0073E80D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 119E60C62C1F4C5B0073E80D /* Assets.xcassets */; };
@@ -20,7 +18,6 @@
 		119E60D42C1F4FC90073E80D /* RandomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E60D32C1F4FC90073E80D /* RandomView.swift */; };
 		119E60D62C1F4FE00073E80D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E60D52C1F4FE00073E80D /* MapView.swift */; };
 		119E60D82C1F4FEE0073E80D /* UghView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E60D72C1F4FEE0073E80D /* UghView.swift */; };
-		119E60DD2C1FC10C0073E80D /* SuniCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E60DC2C1FC10C0073E80D /* SuniCardView.swift */; };
 		119E60DF2C1FC69D0073E80D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E60DE2C1FC69D0073E80D /* MainView.swift */; };
 		119E60E42C1FCCB20073E80D /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E60E32C1FCCB20073E80D /* LottieView.swift */; };
 		119E60EC2C1FE48C0073E80D /* Animation - test.json in Resources */ = {isa = PBXBuildFile; fileRef = 119E60EB2C1FE48B0073E80D /* Animation - test.json */; };
@@ -28,16 +25,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		11233C312C21B6FC005F91E3 /* Hongun_spotCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hongun_spotCardView.swift; sourceTree = "<group>"; };
-		11233C332C21B715005F91E3 /* Deoksu_PastaCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deoksu_PastaCardView.swift; sourceTree = "<group>"; };
-		11233C352C21B72D005F91E3 /* Seaweed_KimbapCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seaweed_KimbapCardView.swift; sourceTree = "<group>"; };
 		11233C3D2C21DAF2005F91E3 /* mapLipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapLipApp.swift; sourceTree = "<group>"; };
 		11233C3F2C21DAF2005F91E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		11233C412C21DAF3005F91E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11233C442C21DAF3005F91E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		11233C492C21DB8C005F91E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		11233C4A2C21EDEC005F91E3 /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
-		11233C4C2C21F7AA005F91E3 /* DirectionsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsHelper.swift; sourceTree = "<group>"; };
+		11233C4E2C22687F005F91E3 /* RandomcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomcardView.swift; sourceTree = "<group>"; };
+		11233C502C22815C005F91E3 /* middle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = middle.json; sourceTree = "<group>"; };
 		119E60BF2C1F4C5A0073E80D /* Yumyum_Hyoja.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yumyum_Hyoja.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		119E60C22C1F4C5A0073E80D /* Yumyum_HyojaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yumyum_HyojaApp.swift; sourceTree = "<group>"; };
 		119E60C42C1F4C5A0073E80D /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -48,7 +43,6 @@
 		119E60D32C1F4FC90073E80D /* RandomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomView.swift; sourceTree = "<group>"; };
 		119E60D52C1F4FE00073E80D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		119E60D72C1F4FEE0073E80D /* UghView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UghView.swift; sourceTree = "<group>"; };
-		119E60DC2C1FC10C0073E80D /* SuniCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuniCardView.swift; sourceTree = "<group>"; };
 		119E60DE2C1FC69D0073E80D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		119E60E32C1FCCB20073E80D /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; usesTabs = 0; };
 		119E60EB2C1FE48B0073E80D /* Animation - test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Animation - test.json"; sourceTree = "<group>"; };
@@ -66,18 +60,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		11233C302C21B51F005F91E3 /* RandomCard */ = {
-			isa = PBXGroup;
-			children = (
-				11233C4C2C21F7AA005F91E3 /* DirectionsHelper.swift */,
-				119E60DC2C1FC10C0073E80D /* SuniCardView.swift */,
-				11233C312C21B6FC005F91E3 /* Hongun_spotCardView.swift */,
-				11233C332C21B715005F91E3 /* Deoksu_PastaCardView.swift */,
-				11233C352C21B72D005F91E3 /* Seaweed_KimbapCardView.swift */,
-			);
-			path = RandomCard;
-			sourceTree = "<group>";
-		};
 		11233C3C2C21DAF2005F91E3 /* mapLip */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				119E60EB2C1FE48B0073E80D /* Animation - test.json */,
+				11233C502C22815C005F91E3 /* middle.json */,
 				119E60C62C1F4C5B0073E80D /* Assets.xcassets */,
 			);
 			path = Resource;
@@ -152,7 +135,7 @@
 				119E60D12C1F4FB50073E80D /* LocationMapView.swift */,
 				119E60E32C1FCCB20073E80D /* LottieView.swift */,
 				119E60D32C1F4FC90073E80D /* RandomView.swift */,
-				11233C302C21B51F005F91E3 /* RandomCard */,
+				11233C4E2C22687F005F91E3 /* RandomcardView.swift */,
 				119E60D52C1F4FE00073E80D /* MapView.swift */,
 				119E60D72C1F4FEE0073E80D /* UghView.swift */,
 				11233C4A2C21EDEC005F91E3 /* CLLocationCoordinate2D.swift */,
@@ -226,6 +209,7 @@
 			files = (
 				119E60CB2C1F4C5B0073E80D /* Preview Assets.xcassets in Resources */,
 				119E60C72C1F4C5B0073E80D /* Assets.xcassets in Resources */,
+				11233C512C22815C005F91E3 /* middle.json in Resources */,
 				119E60EC2C1FE48C0073E80D /* Animation - test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,18 +221,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11233C342C21B715005F91E3 /* Deoksu_PastaCardView.swift in Sources */,
 				119E60D22C1F4FB50073E80D /* LocationMapView.swift in Sources */,
-				11233C322C21B6FC005F91E3 /* Hongun_spotCardView.swift in Sources */,
 				11233C4B2C21EDEC005F91E3 /* CLLocationCoordinate2D.swift in Sources */,
 				119E60DF2C1FC69D0073E80D /* MainView.swift in Sources */,
 				119E60C52C1F4C5A0073E80D /* SplashView.swift in Sources */,
 				119E60D62C1F4FE00073E80D /* MapView.swift in Sources */,
-				11233C4D2C21F7AA005F91E3 /* DirectionsHelper.swift in Sources */,
+				11233C4F2C22687F005F91E3 /* RandomcardView.swift in Sources */,
 				119E60C32C1F4C5A0073E80D /* Yumyum_HyojaApp.swift in Sources */,
-				119E60DD2C1FC10C0073E80D /* SuniCardView.swift in Sources */,
 				119E60E42C1FCCB20073E80D /* LottieView.swift in Sources */,
-				11233C362C21B72D005F91E3 /* Seaweed_KimbapCardView.swift in Sources */,
 				119E60D42C1F4FC90073E80D /* RandomView.swift in Sources */,
 				119E60D82C1F4FEE0073E80D /* UghView.swift in Sources */,
 			);
