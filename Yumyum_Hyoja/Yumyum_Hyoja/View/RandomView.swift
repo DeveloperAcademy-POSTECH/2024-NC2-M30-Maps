@@ -21,17 +21,18 @@ struct RandomView: View {
     // showLottieView: Lottie 애니메이션 표시 여부, 초기 로딩 시에도 LottieView를 표시
     @State private var navigateToMapView = false
     // navigateToMapView: 지도 뷰로의 네비게이션 여부
-
+    @State private var lottieFilename = "middle"
+    // lottieFilename: 현재 보여지는 Lottie 애니메이션 파일명
+    
     var body: some View {
         ZStack {
             Color.main // 메인 색상을 전체 화면 배경색으로 설정
                 .edgesIgnoringSafeArea(.all) // Safe Area를 무시하고 전체 화면을 채우도록 설정
             
-            
             VStack {
                 if showLottieView {
-                    LottieView(filename: "middle")
-                    // showLottieView가 true일 때 LottieView를 표시
+                    LottieView(filename: lottieFilename)
+                        // showLottieView가 true일 때 LottieView를 표시
                         .edgesIgnoringSafeArea(.all)
                         .onAppear {
                             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
@@ -46,33 +47,42 @@ struct RandomView: View {
                 } else {
                     if let selectedCard = selectedCard {
                         RandomCardView(destinationCoordinate: selectedCard.location)
-                        //  showLottieView가 false일 때 선택된 카드가 있으면 이를 표시
-                        // RandomCardView는 선택된 카드의 위치
+                            //  showLottieView가 false일 때 선택된 카드가 있으면 이를 표시
+                            // RandomCardView는 선택된 카드의 위치
                             .padding()
                         
                         HStack {
                             Button(action: {
                                 showLottieView = true
+                                lottieFilename = "middle" // 초기 Lottie 애니메이션 파일로 변경
                                 // Lottie 애니메이션을 다시 표시, 카드 표시를 숨김
                                 withAnimation {
                                     showCard = false
                                 }
                             }) {
-                                Image(systemName: "gobackward")
+                                Image(systemName: "arrow.clockwise")
                                     .padding()
                                     .background(Color.gry)
                                     .foregroundColor(.black)
+                                    .font(.custom("Cafe24SsurroundairOTF", size: 24))
+                                    .bold()
                                     .cornerRadius(8)
                             }
                             .padding()
                             
                             Button(action: {
-                                navigateToMapView = true
-                                //  "길안내 시작" 버튼으로, navigateToMapView를 true로 설정하여 지도 뷰로 네비게이션
+                                lottieFilename = "runhyo" // "runho" Lottie 애니메이션 파일로 변경
+                                withAnimation {
+                                    showLottieView = true
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                        navigateToMapView = true
+                                    }
+                                }
                             }) {
                                 Text("길안내 시작")
                                     .padding()
-                                    .background(Color.gam)
+                                    .font(.custom("Cafe24SsurroundairOTF", size: 24))
+                                    .background(Color.orange)
                                     .foregroundColor(.white)
                                     .cornerRadius(8)
                             }
@@ -81,7 +91,7 @@ struct RandomView: View {
                                 NavigationLink(destination: MapView(destinationCoordinate: selectedCard.location), isActive: $navigateToMapView) {
                                     EmptyView()
                                 }
-                                    .hidden()
+                                .hidden()
                             )
                         }
                     }
@@ -117,10 +127,10 @@ struct RandomView: View {
     private func selectRandomCard() {
         // selectRandomCard() 메서드는 카드 배열에서 무작위로 하나의 카드를 선택
         let cards = [
-            ("SuniCardView", CLLocationCoordinate2D(latitude: 36.0079529582591, longitude: 129.329425672387)),
-            ("HongunSpotCardView", CLLocationCoordinate2D(latitude: 36.0079529582591, longitude: 129.329425672387)),
-            ("DeoksuPastaCardView", CLLocationCoordinate2D(latitude: 36.0079529582591, longitude: 129.329425672387)),
-            ("SeaweedKimbapCardView", CLLocationCoordinate2D(latitude: 36.0079529582591, longitude: 129.329425672387))
+            ("순이", CLLocationCoordinate2D(latitude: 36.0079529582591, longitude: 129.329425672387)),
+            ("홍운반점", CLLocationCoordinate2D(latitude: 36.0079529582591, longitude: 129.329425672387)),
+            ("덕수파스타", CLLocationCoordinate2D(latitude: 36.0079529582591, longitude: 129.329425672387)),
+            ("김고미김밥", CLLocationCoordinate2D(latitude: 36.0079529582591, longitude: 129.329425672387))
         ]
         // 카드 배열은 각각의 카드 이름과 위치를 포함
         if let card = cards.randomElement() {
