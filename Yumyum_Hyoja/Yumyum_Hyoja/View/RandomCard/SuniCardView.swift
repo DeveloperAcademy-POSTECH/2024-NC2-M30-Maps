@@ -12,6 +12,7 @@ struct SuniCardView: View {
     var destinationCoordinate: CLLocationCoordinate2D?
     @State private var walkingTime: String?
     
+    
     var body: some View {
         VStack {
             Image("sunicard_view")
@@ -39,9 +40,9 @@ struct SuniCardView: View {
     }
 }
 
-struct SuniCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        SuniCardView(destinationCoordinate: CLLocationCoordinate2D(latitude: 36.0079529582591, longitude: 129.329425672387))
-    }
-}
+//struct SuniCardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SuniCardView(destinationCoordinate: CLLocationCoordinate2D(latitude: 36.0079529582591, longitude: 129.329425672387))
+//    }
+//}
 
