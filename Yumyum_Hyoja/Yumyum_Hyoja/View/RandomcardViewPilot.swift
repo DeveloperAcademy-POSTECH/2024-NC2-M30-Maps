@@ -45,14 +45,14 @@ struct RandomcardViewPilot: View {
                     
                     HStack {
                         Text(card.CardType)
-                            .font(.custom("Cafe24SsurroundAir-v1.1", size: 14))
+                            .font(Font.custom("Cafe24SsurroundairOTF", size: 16))
                         
                         Spacer()
                     } .padding(.horizontal, 50)
                     
                     HStack {
                         Text(card.CardName)
-                            .font(.custom("chab", size: 48))
+                            .font(Font.custom("LOTTERIACHAB", size: 48))
                         
                         Spacer()
                     } 
@@ -60,15 +60,15 @@ struct RandomcardViewPilot: View {
                     
                     Image(card.CardImage)
                         .resizable()
-                        .frame(width: 240, height: 240)
+                        .frame(width: 200, height: 200)
                     
                     HStack {
                         Text("추천\n메뉴")
-                            .font(.custom("Cafe24SsurroundAir-v1.1", size: 20))
+                            .font(Font.custom("Cafe24SsurroundairOTF", size: 16))
                             .foregroundStyle(Color(red: 0.3, green: 0.5, blue: 1))
                         
                         Text(card.CardMenu)
-                            .font(.custom("Cafe24SsurroundAir-v1.1", size: 28))
+                            .font(.custom("Cafe24SsurroundairOTF", size: 26))
                         
                         Spacer()
                     } 
@@ -77,9 +77,9 @@ struct RandomcardViewPilot: View {
                     
                     HStack {
                         Text(card.CardTime)
-                            .font(.custom("Cafe24SsurroundAir-v1.1", size: 20))
+                            .font(.custom("Cafe24SsurroundairOTF", size: 18))
                         Text(card.CardRest ?? "")
-                            .font(.custom("Cafe24SsurroundAir-v1.1", size: 20))
+                            .font(.custom("Cafe24SsurroundairOTF", size: 18))
                             .foregroundStyle(.red)
                         
                         Spacer()
@@ -89,7 +89,7 @@ struct RandomcardViewPilot: View {
                     
                     HStack {
                         Text(card.CardNumber)
-                            .font(.custom("Cafe24SsurroundAir-v1.1", size: 20))
+                            .font(.custom("Cafe24SsurroundairOTF", size: 20))
                             .foregroundStyle(.gray)
                         
                         Spacer()
@@ -126,7 +126,7 @@ struct RandomcardViewPilot: View {
                         .foregroundStyle(Color(red: 1, green: 0.5,blue: 0.3))
                         .overlay {
                         Text("길 안내 시작")
-                                .font(.custom("Cafe24SsurroundAir-v1.1", size: 24))
+                                .font(.custom("Cafe24SsurroundairOTF", size: 24))
                                 .foregroundStyle(.white)
                     }
                     

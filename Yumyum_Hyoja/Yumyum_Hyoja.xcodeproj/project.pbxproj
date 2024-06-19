@@ -52,6 +52,7 @@
 		1C15DE5F2C2319DE00E2495E /* RandomcardViewPilot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomcardViewPilot.swift; sourceTree = "<group>"; };
 		1C15DE622C231C1100E2495E /* Cafe24SsurroundAir-v1.1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cafe24SsurroundAir-v1.1.otf"; sourceTree = "<group>"; };
 		1C15DE642C231C1B00E2495E /* chab.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = chab.otf; sourceTree = "<group>"; };
+		1C15DE662C232B2800E2495E /* Yumyum-Hyoja-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Yumyum-Hyoja-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +107,7 @@
 		119E60C12C1F4C5A0073E80D /* Yumyum_Hyoja */ = {
 			isa = PBXGroup;
 			children = (
+				1C15DE662C232B2800E2495E /* Yumyum-Hyoja-Info.plist */,
 				1C56ABE62C21215300A80244 /* View */,
 				119E60C22C1F4C5A0073E80D /* Yumyum_HyojaApp.swift */,
 				119E60F02C20007A0073E80D /* Resource */,
@@ -384,6 +386,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Yumyum-Hyoja-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자 위치 설정";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -425,6 +428,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Yumyum-Hyoja-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자 위치 설정";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
