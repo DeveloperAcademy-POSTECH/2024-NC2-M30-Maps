@@ -3,13 +3,19 @@ import CoreLocation
 
 struct RandomView: View {
     var coordinate: CLLocationCoordinate2D?
-    
+  // coordinate: 출발지 좌표
     @State private var selectedCard: (name: String, view: AnyView, location: CLLocationCoordinate2D)?
     @State private var showCard = false
     @State private var showMapView = false
     @State private var showLottieView = true
     @State private var navigateToMapView = false
     @State private var lottieFilename = "middle"
+ // selectedCard: 선택된 카드의 정보를 저장하는 튜플로, 카드의 이름, 뷰, 그리고 좌표를 포함.
+//showCard: 카드를 표시할지 여부를 제어하는 상태.
+//showMapView: 지도를 표시할지 여부를 제어하는 상태.
+//showLottieView: Lottie 애니메이션을 표시할지 여부를 제어하는 상태.
+//navigateToMapView: 네비게이션 링크를 활성화할지 여부를 제어하는 상태.
+//lottieFilename: 표시할 Lottie 애니메이션 파일의 이름을 나타내는 상태    
     
     var body: some View {
         ZStack {
@@ -33,7 +39,8 @@ struct RandomView: View {
                     if let selectedCard = selectedCard {
                         RandomCardView(destinationCoordinate: selectedCard.location)
                             .padding()
-                        
+                        // showLottieView가 true일 때 Lottie 애니메이션을 표시. 애니메이션이 끝나면 카드 선택과 표시를 처리
+                        // selectedCard가 존재할 때 RandomCardView를 표시
                         HStack {
                             Button(action: {
                                 withAnimation {
@@ -42,20 +49,15 @@ struct RandomView: View {
                                     showCard = false
                                 }
                             }) {
-                                
-                                Rectangle()
-                                    .cornerRadius(20)
-                                    .frame(width: 80, height: 80)
-                                    .foregroundStyle(Color(red: 0.9, green: 0.9, blue: 0.94))
-                                    .overlay {
-                                        Image(systemName: "arrow.clockwise")
-                                            .font(.title)
-                                            .padding()
-                                            .foregroundColor(.black)
-                                    }
-                                    
+                                Image(systemName: "arrow.clockwise")
+                                    .padding()
+                                    .background(Color.gry)
+                                    .foregroundColor(.black)
+                                    .font(.custom("Cafe24SsurroundairOTF", size: 24))
+                                    .bold()
+                                    .cornerRadius(8)
                             }
-                            .padding(.leading, 40)
+                            .padding()
                             
                             Button(action: {
                                 showLottieView = true
@@ -66,18 +68,14 @@ struct RandomView: View {
                                     }
                                 }
                             }) {
-                                
-                                Rectangle()
-                                    .cornerRadius(20)
-                                    .frame(width: 273, height: 80)
-                                    .foregroundStyle(Color(red: 1, green: 0.5, blue: 0.3))
-                                    .overlay {
-                                        Text("길안내 시작")
-                                            .font(.custom("Cafe24SsurroundairOTF", size: 24))
-                                            .foregroundColor(.white)
-                                    }
+                                Text("길안내 시작")
+                                    .padding()
+                                    .font(.custom("Cafe24SsurroundairOTF", size: 24))
+                                    .background(Color.gam)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(8)
                             }
-                            .padding(.trailing, 40)
+                            .padding()
                             .background(
                                 NavigationLink(destination: MapView(destinationCoordinate: selectedCard.location), isActive: $navigateToMapView) {
                                     EmptyView()
@@ -85,7 +83,6 @@ struct RandomView: View {
                                 .hidden()
                             )
                         }
-                        .padding(.top, 40)
                     }
                 }
             }
@@ -120,9 +117,4 @@ struct RandomView: View {
         }
     }
 }
-
-struct RandomView_Previews: PreviewProvider {
-    static var previews: some View {
-        RandomView()
-    }
-}
+// 카드 목록에서 무작위로 하나를 선택하여 selectedCard에 저장

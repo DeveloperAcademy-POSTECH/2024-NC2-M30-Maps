@@ -47,21 +47,25 @@ struct MapView: View {
                 HStack {
                     VStack {
                         Text("걸어서 앞으로: ")
-                            .font(.headline)
+                            .font(.custom("Cafe24SsurroundairOTF", size: 14))
+                            
                             .foregroundColor(.primary)
-                            + Text(" \(formattedTravelTime())")
+                            
+                         Text(" \(formattedTravelTime())")
                         // showDirections가 true인 경우 예상 도보 시간을 텍스트로 표시하고, 도착 버튼을 추가
-                                .font(.title) // 원하는 글꼴 크기로 설정
+                            .font(.custom("Cafe24SsurroundairOTF", size: 26))
                                 .foregroundColor(.gam) // 원하는 색상으로 설정
                                 .bold() // 필요에 따라 굵게 설정
-                            
-                    } 
-                    .padding()
+                                
+                    }
+                    .padding(.horizontal)
                     Button(action: {
                         navigationActive = true
                         // 도착 버튼을 누르면 navigationActive가 true로 설정되어 NavigationLink가 활성화
                     }) {
                         Text("도착")
+                            .font(.custom("Cafe24SsurroundairOTF", size: 24))
+                            .bold()
                             .padding()
                             .background(Color.gam)
                             .foregroundColor(.white)
@@ -121,8 +125,3 @@ struct MapView: View {
     }
 }
 
-//struct MapView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MapView(destinationCoordinate: CLLocationCoordinate2D(latitude: 36.0083109245033, longitude: 129.331608703121))
-//    }
-//}
