@@ -139,6 +139,9 @@ struct LocationMapView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle()) 
         // NavigationView 스타일을 StackNavigationViewStyle로 설정하여 제목을 숨김
+        .navigationBarTitle("", displayMode: .inline)
+        .navigationBarBackButtonHidden(true)
+        
     }
     
     private func searchForLocation(query: String) {
