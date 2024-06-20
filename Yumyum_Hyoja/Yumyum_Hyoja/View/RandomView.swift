@@ -101,9 +101,9 @@ struct RandomView: View {
     private func selectRandomCard() {
         let cards = [
             ("순이", CLLocationCoordinate2D(latitude: 36.0079529582591, longitude: 129.329425672387)),
-            ("홍운반점", CLLocationCoordinate2D(latitude: 36.0079529582591, longitude: 129.329425672387)),
-            ("덕수파스타", CLLocationCoordinate2D(latitude: 36.0079529582591, longitude: 129.329425672387)),
-            ("김고미김밥", CLLocationCoordinate2D(latitude: 36.0079529582591, longitude: 129.329425672387))
+            ("홍운반점", CLLocationCoordinate2D(latitude: 36.0087180836111, longitude: 129.332544437547)),
+            ("덕수파스타", CLLocationCoordinate2D(latitude: 36.007853673717, longitude: 129.330398930981)),
+            ("김고미김밥", CLLocationCoordinate2D(latitude: 36.0080964116588, longitude: 129.330458752437))
         ]
         if let card = cards.randomElement() {
             selectedCard = (card.0, AnyView(RandomCardView(destinationCoordinate: card.1)), card.1)

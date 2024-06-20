@@ -34,6 +34,7 @@ struct MapView: View {
         VStack {
             Map(coordinateRegion: $region, annotationItems: [MapAnnotation(coordinate: destinationCoordinate)]) { location in
                 MapMarker(coordinate: location.coordinate, tint: .red)
+                
             }
             // Map 뷰를 표시. 지도는 region을 바인딩하여 중심 좌표와 확대/축소 범위를 제어
             // annotationItems를 사용하여 목적지 위치에 마커를 표시
@@ -85,6 +86,7 @@ struct MapView: View {
     private func calculateDirections() {
         // calculateDirections() 메서드는 경로를 계산
         let request = MKDirections.Request()
+        
         // MKDirections.Request 객체를 생성하고 출발지와 목적지를 설정
         request.source = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 36.01403091416389, longitude: 129.32595552359552)))
         // request.source는 출발지 좌표를 설정
