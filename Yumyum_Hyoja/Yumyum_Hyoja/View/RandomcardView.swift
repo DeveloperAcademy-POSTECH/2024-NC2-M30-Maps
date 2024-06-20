@@ -44,7 +44,7 @@ struct RandomCardView: View {
                     .cornerRadius(20)
                     .foregroundStyle(.white)
                     .shadow(radius: 4)
-                
+                // Rectangle은 카드를 시각적으로 나타내기 위해 사용. 이 사각형은 흰색 배경에 그림자를 가지며, 모서리가 둥글게 처리
                 VStack {
                     
                     HStack {
