@@ -31,7 +31,7 @@ struct MapView: View {
     }
     
     var body: some View {
-        VStack {
+        ZStack {
             Map(coordinateRegion: $region, annotationItems: [MapAnnotation(coordinate: destinationCoordinate)]) { location in
                 MapMarker(coordinate: location.coordinate, tint: .red)
             }
@@ -41,45 +41,68 @@ struct MapView: View {
                 calculateDirections()
             }
             // onAppear 수식어는 뷰가 나타날 때 calculateDirections() 메서드를 호출하여 경로를 계산
-            
-            if showDirections {
-                HStack {
-                    VStack {
-                        Text("걸어서 앞으로: ")
-                            .font(.headline)
-                            .foregroundColor(.primary)
-                            + Text(" \(formattedTravelTime())")
-                        // showDirections가 true인 경우 예상 도보 시간을 텍스트로 표시하고, 도착 버튼을 추가
-                                .font(.title) // 원하는 글꼴 크기로 설정
-                                .foregroundColor(.gam) // 원하는 색상으로 설정
-                                .bold() // 필요에 따라 굵게 설정
+            VStack {
+                Spacer()
+                
+                ZStack {
+                    Rectangle()
+                        .foregroundStyle(.white)
+                        .frame(width: 361, height: 120)
+                        .cornerRadius(20)
+                        .shadow(radius: 10)
+                    
+                    if showDirections {
+                        
+                        HStack {
+                            VStack {
+                                HStack {
+                                    Text("걸어서 앞으로")
+                                        .font(.custom("Cafe24SsurroundairOTF", size: 12))
+                                        .padding(.horizontal, 14)
+                                    
+                                    Spacer()
+                                }
+                                
+                                HStack {
+                                    Text(" \(formattedTravelTime())")
+                                        .font(.custom("Cafe24SsurroundairOTF", size: 36))
+                                        .foregroundStyle(Color(red: 1, green: 0.5, blue: 0.3))
+                                    Spacer()
+                                }
+                                
+                            }
                             
-                    } 
-                    .padding()
-                    Button(action: {
-                        navigationActive = true
-                        // 도착 버튼을 누르면 navigationActive가 true로 설정되어 NavigationLink가 활성화
-                    }) {
-                        Text("도착")
-                            .padding()
-                            .background(Color.gam)
-                            .foregroundColor(.white)
-                            .clipShape(Circle()) // 버튼 모양을 동그랗게 설정
+                            Button(action: {
+                                navigationActive = true
+                                // 도착 버튼을 누르면 navigationActive가 true로 설정되어 NavigationLink가 활성화
+                            }) {
+                                Circle()
+                                    .frame(width: 80, height: 80)
+                                    .foregroundStyle(Color(red: 1, green: 0.5, blue: 0.3))
+                                    .overlay {
+                                        Text("도착")
+                                            .font(.custom("Cafe24SsurroundairOTF", size: 20))
+                                            .foregroundColor(.white)
+                                    }
+                            }
+                        }
+                        .padding(.horizontal, 14)
+                        
                     }
                 }
-                .padding()
-            }
+            }  .padding(.horizontal, 40) .padding(.bottom, 50)
         }
-        .navigationBarTitle("", displayMode: .inline) 
+        .navigationBarTitle("back", displayMode: .inline)
         // 네비게이션 바 제목 숨기기
-         .navigationBarBackButtonHidden(true) 
-        // "< Back" 버튼 숨기기
+//        .navigationBarBackButtonHidden(true)
+//        // "< Back" 버튼 숨기기
         .background(
             NavigationLink(destination: UghView(), isActive: $navigationActive) {
                 EmptyView()
             }
             // NavigationLink는 navigationActive 상태를 바인딩하여 UghView로 네비게이션
         )
+        .ignoresSafeArea()
     }
     
     private func calculateDirections() {

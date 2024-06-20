@@ -42,15 +42,20 @@ struct RandomView: View {
                                     showCard = false
                                 }
                             }) {
-                                Image(systemName: "arrow.clockwise")
-                                    .padding()
-                                    .background(Color.gry)
-                                    .foregroundColor(.black)
-                                    .font(.custom("Cafe24SsurroundairOTF", size: 24))
-                                    .bold()
-                                    .cornerRadius(8)
+                                
+                                Rectangle()
+                                    .cornerRadius(20)
+                                    .frame(width: 80, height: 80)
+                                    .foregroundStyle(Color(red: 0.9, green: 0.9, blue: 0.94))
+                                    .overlay {
+                                        Image(systemName: "arrow.clockwise")
+                                            .font(.title)
+                                            .padding()
+                                            .foregroundColor(.black)
+                                    }
+                                    
                             }
-                            .padding()
+                            .padding(.leading, 40)
                             
                             Button(action: {
                                 showLottieView = true
@@ -61,14 +66,18 @@ struct RandomView: View {
                                     }
                                 }
                             }) {
-                                Text("길안내 시작")
-                                    .padding()
-                                    .font(.custom("Cafe24SsurroundairOTF", size: 24))
-                                    .background(Color.orange)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(8)
+                                
+                                Rectangle()
+                                    .cornerRadius(20)
+                                    .frame(width: 273, height: 80)
+                                    .foregroundStyle(Color(red: 1, green: 0.5, blue: 0.3))
+                                    .overlay {
+                                        Text("길안내 시작")
+                                            .font(.custom("Cafe24SsurroundairOTF", size: 24))
+                                            .foregroundColor(.white)
+                                    }
                             }
-                            .padding()
+                            .padding(.trailing, 40)
                             .background(
                                 NavigationLink(destination: MapView(destinationCoordinate: selectedCard.location), isActive: $navigateToMapView) {
                                     EmptyView()
@@ -76,6 +85,7 @@ struct RandomView: View {
                                 .hidden()
                             )
                         }
+                        .padding(.top, 40)
                     }
                 }
             }
@@ -108,5 +118,11 @@ struct RandomView: View {
         if let card = cards.randomElement() {
             selectedCard = (card.0, AnyView(RandomCardView(destinationCoordinate: card.1)), card.1)
         }
+    }
+}
+
+struct RandomView_Previews: PreviewProvider {
+    static var previews: some View {
+        RandomView()
     }
 }

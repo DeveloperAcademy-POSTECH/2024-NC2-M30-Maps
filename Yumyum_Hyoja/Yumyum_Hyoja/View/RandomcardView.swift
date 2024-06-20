@@ -111,8 +111,8 @@ struct RandomCardView: View {
     
 }
 
-//struct RandomCardView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        RandomCardView(destinationCoordinate: CLLocationCoordinate2D(latitude: 36.0079529582591, longitude: 129.329425672387))
-//    }
-//}
+struct RandomCardView_Previews: PreviewProvider {
+    static var previews: some View {
+        RandomCardView(destinationCoordinate: CLLocationCoordinate2D(latitude: 36.0079529582591, longitude: 129.329425672387))
+    }
+}
