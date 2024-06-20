@@ -5,7 +5,7 @@
 ## 🎥 Youtube Link
 (추후 만들어진 유튜브 링크 추가)
 
-## 💡 About Augmented Reality
+## 💡 About Maps
 - Mapkit을 통하여 지도에 마커 추가, 지도 범위 지정, 확대 및 축소, 위도 및 경도로 표시, 사용자 위치 설정하는 법을 배우게 되었다.
 - UIKit을 활용하여 Maker를 custom하는 방법을 배우게 되었다. 
 - Mapkit과 CoreLocation으로 다양한 지도 스타일 변경 및 활용법을 익히게 되었다.
