@@ -4,7 +4,7 @@
 //
 //  Created by 박고운 on 6/19/24.
 //
-
+//
 import CoreLocation
 
 extension CLLocationCoordinate2D: Equatable {

@@ -24,6 +24,9 @@
 		11B713012C233059006428A1 /* runhyo.json in Resources */ = {isa = PBXBuildFile; fileRef = 11B713002C233059006428A1 /* runhyo.json */; };
 		11B713052C241F6B006428A1 /* CustomMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B713042C241F6B006428A1 /* CustomMapView.swift */; };
 		11B713072C24528E006428A1 /* MapOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B713062C24528E006428A1 /* MapOverlay.swift */; };
+		11B713092C29C17C006428A1 /* HashableCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B713082C29C17C006428A1 /* HashableCoordinate.swift */; };
+		11B7130B2C29C389006428A1 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7130A2C29C389006428A1 /* LocationManager.swift */; };
+		11B7130D2C29C63D006428A1 /* MapMarkerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7130C2C29C63D006428A1 /* MapMarkerAnnotation.swift */; };
 		1C15DE632C231C1100E2495E /* Cafe24SsurroundAir-v1.1.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1C15DE622C231C1100E2495E /* Cafe24SsurroundAir-v1.1.otf */; };
 		1C15DE652C231C1B00E2495E /* chab.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1C15DE642C231C1B00E2495E /* chab.otf */; };
 		1C56ABE52C21180A00A80244 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1C56ABE42C21180A00A80244 /* Lottie */; };
@@ -54,6 +57,9 @@
 		11B713002C233059006428A1 /* runhyo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = runhyo.json; sourceTree = "<group>"; };
 		11B713042C241F6B006428A1 /* CustomMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapView.swift; sourceTree = "<group>"; };
 		11B713062C24528E006428A1 /* MapOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapOverlay.swift; sourceTree = "<group>"; };
+		11B713082C29C17C006428A1 /* HashableCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashableCoordinate.swift; sourceTree = "<group>"; };
+		11B7130A2C29C389006428A1 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		11B7130C2C29C63D006428A1 /* MapMarkerAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarkerAnnotation.swift; sourceTree = "<group>"; };
 		1C15DE622C231C1100E2495E /* Cafe24SsurroundAir-v1.1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cafe24SsurroundAir-v1.1.otf"; sourceTree = "<group>"; };
 		1C15DE642C231C1B00E2495E /* chab.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = chab.otf; sourceTree = "<group>"; };
 		1C15DE662C232B2800E2495E /* Yumyum-Hyoja-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Yumyum-Hyoja-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -164,6 +170,9 @@
 				11233C4A2C21EDEC005F91E3 /* CLLocationCoordinate2D.swift */,
 				11B713042C241F6B006428A1 /* CustomMapView.swift */,
 				11B713062C24528E006428A1 /* MapOverlay.swift */,
+				11B713082C29C17C006428A1 /* HashableCoordinate.swift */,
+				11B7130A2C29C389006428A1 /* LocationManager.swift */,
+				11B7130C2C29C63D006428A1 /* MapMarkerAnnotation.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -249,15 +258,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B713092C29C17C006428A1 /* HashableCoordinate.swift in Sources */,
 				119E60D22C1F4FB50073E80D /* LocationMapView.swift in Sources */,
 				11233C4B2C21EDEC005F91E3 /* CLLocationCoordinate2D.swift in Sources */,
 				119E60DF2C1FC69D0073E80D /* MainView.swift in Sources */,
 				119E60C52C1F4C5A0073E80D /* SplashView.swift in Sources */,
 				119E60D62C1F4FE00073E80D /* MapView.swift in Sources */,
 				11233C4F2C22687F005F91E3 /* RandomcardView.swift in Sources */,
+				11B7130D2C29C63D006428A1 /* MapMarkerAnnotation.swift in Sources */,
 				119E60C32C1F4C5A0073E80D /* Yumyum_HyojaApp.swift in Sources */,
 				119E60E42C1FCCB20073E80D /* LottieView.swift in Sources */,
 				119E60D42C1F4FC90073E80D /* RandomView.swift in Sources */,
+				11B7130B2C29C389006428A1 /* LocationManager.swift in Sources */,
 				11B713052C241F6B006428A1 /* CustomMapView.swift in Sources */,
 				119E60D82C1F4FEE0073E80D /* UghView.swift in Sources */,
 				11B713072C24528E006428A1 /* MapOverlay.swift in Sources */,
@@ -396,7 +408,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Yumyum-Hyoja-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치 사용중 가져간다";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -439,7 +452,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Yumyum-Hyoja-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치 사용중 가져간다";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
